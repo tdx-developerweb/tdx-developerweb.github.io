@@ -52,64 +52,57 @@ window.addEventListener('scroll', function() {
 
 
 
-function ajustarAlturaVideo() {
-    const contenedor = document.getElementById('contenedor_encabezado_2');
-    const video = document.querySelector('.video_de_fondo_2');
-    
-    // Captura la altura del contenedor
-    const alturaContenedor = contenedor.clientHeight;
+document.addEventListener('DOMContentLoaded', () => {
+    function ajustarAlturaVideo() {
+        const contenedor = document.getElementById('contenedor_encabezado_2');
+        const video = document.querySelector('.video_de_fondo_2');
 
-    // Asigna la altura al video
-    video.style.height = `${alturaContenedor}px`;
-}
+        // Captura la altura del contenedor
+        const alturaContenedor = contenedor.clientHeight;
 
-// Ajustar la altura inicialmente
-ajustarAlturaVideo();
+        // Asigna la altura al video
+        video.style.height = `${alturaContenedor}px`;
+    }
 
-// Ajustar la altura cuando se redimensiona la ventana
-window.addEventListener('resize', ajustarAlturaVideo);
+    function ajustarAlturaVideoFondo() {
+        const contenedor = document.getElementById('contenedor_encabezado');
+        const video = document.querySelector('.video_de_fondo');
+
+        // Captura la altura del contenedor
+        const alturaContenedor = contenedor.clientHeight;
+
+        // Asigna la altura al video
+        video.style.height = `${alturaContenedor}px`;
+    }
+
+    function ajustarAlturaVideoFondo_2() {
+        const contenedor = document.getElementById('contenedor_encabezado_3');
+        const video = document.querySelector('.video_de_fondo_3');
+
+        // Captura la altura del contenedor
+        const alturaContenedor = contenedor.clientHeight;
+
+        // Asigna la altura al video
+        video.style.height = `${alturaContenedor}px`;
+    }
+
+    function ajustarAlturas() {
+        // Utiliza requestAnimationFrame para asegurar que el ajuste se realice después del renderizado
+        requestAnimationFrame(() => {
+            ajustarAlturaVideo();
+            ajustarAlturaVideoFondo();
+            ajustarAlturaVideoFondo_2();
+        });
+    }
+
+    // Ajustar la altura inicialmente después de un pequeño retraso
+    setTimeout(ajustarAlturas, 100);
+
+    // Ajustar la altura cuando se redimensiona la ventana
+    window.addEventListener('resize', ajustarAlturas);
+});
 
 
-
-
-
-function ajustarAlturaVideoFondo() {
-    const contenedor = document.getElementById('contenedor_encabezado');
-    const video = document.querySelector('.video_de_fondo');
-    
-    // Captura la altura del contenedor
-    const alturaContenedor = contenedor.clientHeight;
-
-    // Asigna la altura al video
-    video.style.height = `${alturaContenedor}px`;
-}
-
-// Ajustar la altura inicialmente
-ajustarAlturaVideoFondo();
-
-// Ajustar la altura cuando se redimensiona la ventana
-window.addEventListener('resize', ajustarAlturaVideoFondo);
-
-
-
-
-
-function ajustarAlturaVideoFondo_2() {
-    const contenedor = document.getElementById('contenedor_encabezado_3');
-    const video = document.querySelector('.video_de_fondo_3');
-    
-    // Captura la altura del contenedor
-    const alturaContenedor = contenedor.clientHeight;
-
-    // Asigna la altura al video
-    video.style.height = `${alturaContenedor}px`;
-}
-
-// Ajustar la altura inicialmente
-ajustarAlturaVideoFondo_2();
-
-// Ajustar la altura cuando se redimensiona la ventana
-window.addEventListener('resize', ajustarAlturaVideoFondo_2);
 
 
 
