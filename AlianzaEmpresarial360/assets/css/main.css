@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth !important;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .contenedor_video {
     width: 100%;
     height: auto;
