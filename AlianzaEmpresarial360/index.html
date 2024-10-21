@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    
+    <!-- SEO meta tags -->
+    <title>Alianza Empresarial 360</title>
+    <meta name="description" content="Alianza Empresarial 360">
+    <meta name="keywords" content="Contabilidad, Emprendimientos, Empresas, Laboral, Gestión, Marketing">
+    <meta name="author" content="tdxcore">
+
+    <!-- Webmanifest + Favicon / App icons -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+        
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Import Google font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Font icons -->
+    <link rel="stylesheet" href="assets/icons/around-icons.min.css">
+
+    <!-- Theme styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Alianza Empresarial 360">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.url.com">
+    <meta property="og:description" content="Soluciones estratégicas integrales a empresas, mediante consultorías especializadas en los ámbitos contable, legal y laboral">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Alianza Empresarial 360">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alianza Empresarial 360">
+    <meta name="twitter:description" content="Soluciones estratégicas integrales a empresas, mediante consultorías especializadas en los ámbitos contable, legal y laboral">
+    <meta name="twitter:site" content="@Alianza_Empresarial_360">
+    
+    <!-- AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+
+      /* Fuentes */
+      @font-face {
+      font-family: 'IBM Plex Sans';
+      src: url('assets/fuentes/ibm_plex_sans/IBMPlexSans-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'IBM Plex Sans';
+          src: url('assets/fuentes/ibm_plex_sans/IBMPlexSans-Bold.ttf') format('truetype');
+          font-weight: bold;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'IBM Plex Sans';
+          src: url('assets/fuentes/ibm_plex_sans/IBMPlexSans-Italic.ttf') format('truetype');
+          font-weight: normal;
+          font-style: italic;
+      }
+
+      @font-face {
+          font-family: 'IBM Plex Sans';
+          src: url('assets/fuentes/ibm_plex_sans/IBMPlexSans-BoldItalic.ttf') format('truetype');
+          font-weight: bold;
+          font-style: italic;
+      }
+
+      p{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h1{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h2{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h3{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h4{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h5{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+      h6{
+        font-family: 'IBM Plex Sans', sans-serif !important;
+      }
+
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1500)
+        }
+      })()
+    </script>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper -->
+    <main class="page-wrapper">
+
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page -->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+
+          <!-- Navbar brand (Logo) -->
+          <a class="navbar-brand pe-sm-3" href="index.html">
+              <div class="text-primary flex-shrink-0 me-2">
+              <div style="width: 35px; height: 32px;">
+                  <img src="assets/img/logo_2.png" alt="Alianza Empresarial 360" title="Alianza Empresarial 360">
+              </div>
+              </div>
+              Alianza Empresarial 360
+          </a>
+
+          <!-- Mobile menu toggler (Hamburger) -->
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar collapse (Main navigation) -->
+          <nav class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Servicios</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html#consultoria_contable">Consultoría Contable</a></li>
+                  <li><a class="dropdown-item" href="index.html#asesoria_legal">Asesoría Legal</a></li>
+                  <li><a class="dropdown-item" href="index.html#gestion_laboral">Gestión Laboral</a></li>
+                  <li><a class="dropdown-item" href="index.html#planificacion">Planificación Estratégica</a></li>
+                  <li><a class="dropdown-item" href="index.html#formacion_capacitacion">Marketing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Nosotros</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="quienes_somos.html#quienes_somos">¿Quienes somos?</a></li>
+                  <li><a class="dropdown-item" href="quienes_somos.html#mision_y_vision">Misión y Visión</a></li>
+                  <li><a class="dropdown-item" href="quienes_somos.html#que_hacemos">¿Qué Hacemos?</a></li>
+                  <li><a class="dropdown-item" href="quienes_somos.html#enfoque">Nuestro Enfoque</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html" data-bs-auto-close="outside" aria-expanded="false">Contáctanos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="contenedor_video">
+        <video class="video_bienvenida" id="video" loop autoplay>
+            <source src="assets/videos/bienvenida.mp4" type="video/mp4">
+        </video>
+        <div class="contenedor_datos_bienvenida">
+            <div class="contenedor_logo_imagen">
+                <img src="assets/img/logo.png" alt="Alianza Empresarial 360" title="Alianza Empresarial 360" class="logo_imagen">
+            </div>
+            <p class="texto_video_bienvenida">Alianza Empresarial 360</p>
+            <div class="contenedor_logo_imagen" style="position: absolute; bottom: 10px; right: 10px; width: auto; grid-gap: 20px 20px;">
+              <i id="playPauseBtn" class="fa-solid fa-play" style="cursor: pointer; font-size: 30px; color: #ffffff;"></i>
+              <i id="muteBtn" class="fa-solid fa-volume-high" style="cursor: pointer; font-size: 30px; color: #ffffff;"></i>
+          </div>          
+        </div>   
+      </div>
+
+      <!-- Breadcrumb + Services grid -->
+      <section class="container py-5 mt-5 mb-md-3 mb-lg-4 mb-xxl-5" id="seccion_servicios">
+
+        <div class="text-center pb-3 pt-lg-2 pt-xl-4 my-1 my-sm-3 my-lg-4">
+          <h1 class="display-2">Nuestros servicios</h1>
+          <p class="fs-lg mb-0">Ofrecemos una amplia gama de servicios de consultoría.</p>
+        </div>
+        <!-- Services grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 pb-sm-3 pb-md-4 pb-xl-5">
+
+          <!-- Item -->
+          <div class="col" id="consultoria_contable" data-aos="fade-up">
+            <a class="card card-hover-primary bg-secondary border-0 h-100 text-decoration-none" href="index.html#seccion_pricing">
+              <div class="card-body pb-0">
+                <svg class="d-block text-warning mb-4" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.7276 27.5001C1.21683 28.3857 0.916576 29.3769 0.850062 30.3971C0.783549 31.4173 0.952558 32.4391 1.34402 33.3835C1.73548 34.328 2.33891 35.1697 3.10764 35.8437C3.87638 36.5177 4.78982 37.0058 5.77734 37.2704C6.76486 37.5349 7.8 37.5689 8.80272 37.3695C9.80544 37.1701 10.7489 36.7428 11.5601 36.1206C12.3713 35.4983 13.0285 34.6979 13.4809 33.7811C13.9334 32.8643 14.1689 31.8558 14.1693 30.8334C14.1698 29.3654 13.6858 27.9382 12.7924 26.7734C11.8989 25.6085 10.6459 24.7712 9.22787 24.3913C7.80984 24.0114 6.30606 24.1101 4.94991 24.6722C3.59375 25.2344 2.46105 26.2284 1.7276 27.5001Z"></path>
+                  <path d="M11.7344 10.1667L4.23438 23.1667C5.42383 22.6595 6.71498 22.4361 8.00568 22.5142C9.29638 22.5922 10.5512 22.9695 11.6709 23.6163C12.7906 24.263 13.7444 25.1615 14.4569 26.2405C15.1694 27.3196 15.621 28.5496 15.776 29.8333L19.0427 24.1667C12.8427 13.45 11.9427 12.425 11.7344 10.1667Z"></path>
+                  <path d="M38.2784 27.5C37.8534 26.7833 25.6701 5.6083 25.4284 5.29996C24.4255 3.9011 22.9204 2.94436 21.2281 2.62997C19.5358 2.31559 17.7875 2.66792 16.3491 3.61323C14.9107 4.55855 13.8936 6.02357 13.5108 7.70171C13.1279 9.37984 13.409 11.141 14.2951 12.6166C14.2118 12.6166 13.8784 11.9 26.7284 34.1666C27.1662 34.925 27.749 35.5898 28.4437 36.1229C29.1383 36.656 29.9311 37.0471 30.7769 37.2739C31.6227 37.5006 32.5049 37.5585 33.373 37.4443C34.2412 37.3301 35.0784 37.046 35.8368 36.6083C36.5952 36.1706 37.2599 35.5877 37.793 34.8931C38.3262 34.1984 38.7173 33.4056 38.944 32.5598C39.1707 31.714 39.2287 30.8319 39.1145 29.9637C39.0003 29.0955 38.7162 28.2583 38.2784 27.5Z"></path>
+                </svg>
+                <h3 class="h4 card-title mt-0">Consultoría Contable</h3>
+                <p class="card-text">Brindamos asesoría especializada en gestión financiera, ayudando a las empresas a elaborar estados financieros precisos y a analizar su salud económica. Además, ofrecemos apoyo en el cumplimiento fiscal, garantizando que nuestros clientes cumplan con las normativas vigentes y optimicen su carga tributaria.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <div class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none">
+                  <i class="ai-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col" id="asesoria_legal" data-aos="fade-down">
+            <a class="card card-hover-primary bg-secondary border-0 h-100 text-decoration-none" href="index.html#seccion_pricing">
+              <div class="card-body pb-0">
+                <svg class="d-block text-warning mb-4" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32.6213 22.7824C26.4943 23.0213 20.6934 24.6146 15.525 27.255L8.87893 31.0927C7.12129 32.1061 4.87665 31.4978 3.86795 29.7493L0.49035 23.9008C-0.520513 22.1491 0.0820047 19.9007 1.83372 18.8898L7.33997 15.7103C7.65881 15.5262 8.06657 15.6354 8.25074 15.9543L12.5774 23.4483C12.7647 23.7727 13.1836 23.8804 13.5051 23.6822C13.816 23.4905 13.9009 23.074 13.7182 22.7577L9.36036 15.2095C9.18727 14.9097 9.27227 14.5269 9.55686 14.3297C14.1026 11.1781 17.9484 7.16404 20.9018 2.48266C22.0206 0.707687 24.6278 0.755188 25.6794 2.57599L34.9289 18.5981C35.9801 20.415 34.7215 22.7007 32.6213 22.7824ZM33.8082 11.6236C34.1506 9.6637 33.0019 7.69797 31.1452 7.02512C30.5616 6.81361 30.0322 7.44872 30.3425 7.98632C31.0812 9.2661 31.8225 10.5503 32.5721 11.8482C32.8853 12.3903 33.7004 12.2404 33.8082 11.6236ZM18.4184 35.2136L15.2546 29.7215C15.0708 29.4024 14.6625 29.2929 14.3434 29.477C12.6288 30.4663 12.564 30.5047 10.2768 31.8249C9.95788 32.009 9.84821 32.417 10.0324 32.736L13.2016 38.2245C13.6078 38.9274 14.3384 39.3096 15.0824 39.3096C15.8041 39.3096 16.0801 39.0654 17.625 38.1737C18.66 37.5762 19.0159 36.2478 18.4184 35.2136ZM38.676 6.55444C38.9948 6.37035 39.1041 5.96259 38.92 5.64375C38.736 5.32499 38.3284 5.21557 38.0093 5.39974L36.2843 6.39569C35.694 6.73653 35.9409 7.63989 36.6183 7.63989C36.8554 7.63981 36.8079 7.63297 38.676 6.55444ZM32.5456 3.09976L32.9663 1.53004C33.0616 1.17437 32.8505 0.808857 32.495 0.713521C32.139 0.618351 31.7737 0.829274 31.6783 1.18495L31.2577 2.75466C31.1444 3.17734 31.4629 3.5941 31.902 3.5941C32.1964 3.59402 32.4658 3.3976 32.5456 3.09976ZM39.9772 13.6731C40.0725 13.3175 39.8613 12.9519 39.5057 12.8566L37.9359 12.436C37.5803 12.3409 37.2148 12.5519 37.1194 12.9075C37.0241 13.2631 37.2353 13.6286 37.5909 13.724C39.3076 14.184 39.2134 14.1675 39.3336 14.1675C39.6279 14.1675 39.8973 13.971 39.9772 13.6731Z"></path>
+                </svg>
+                <h3 class="h4 card-title mt-0">Asesoría Legal</h3>
+                <p class="card-text">Nuestra consultoría jurídica se centra en proporcionar orientación en diversas cuestiones legales empresariales, desde la constitución de sociedades hasta la resolución de conflictos. También ofrecemos asesoría en contratación y normativa laboral, asegurándonos de que nuestros clientes cuenten con contratos adecuados y cumplan con las regulaciones laborales pertinentes.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <div class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none">
+                  <i class="ai-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col" id="gestion_laboral" data-aos="fade-up">
+            <a class="card card-hover-primary bg-secondary border-0 h-100 text-decoration-none" href="index.html#seccion_pricing">
+              <div class="card-body pb-0">
+                <svg class="d-block text-warning mb-4" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.7306 12.5C25.4119 6.375 22.5994 2.5 19.9981 2.5C17.3969 2.5 14.5844 6.375 13.2656 12.5H26.7306Z"></path>
+                  <path d="M12.5 20C12.4997 21.6722 12.6112 23.3426 12.8338 25H27.1663C27.3888 23.3426 27.5003 21.6722 27.5 20C27.5003 18.3278 27.3888 16.6574 27.1663 15H12.8338C12.6112 16.6574 12.4997 18.3278 12.5 20Z"></path>
+                  <path d="M13.2656 27.5C14.5844 33.625 17.3969 37.5 19.9981 37.5C22.5994 37.5 25.4119 33.625 26.7306 27.5H13.2656Z"></path>
+                  <path d="M29.2956 12.5H37.1706C35.9874 9.80721 34.1895 7.42918 31.9213 5.55667C29.6531 3.68416 26.9775 2.36928 24.1094 1.7175C26.4806 3.80375 28.3406 7.66125 29.2956 12.5Z"></path>
+                  <path d="M38.0638 15H29.6887C29.895 16.6587 29.9981 18.3286 29.9975 20C29.9977 21.6715 29.8941 23.3413 29.6875 25H38.0625C38.9741 21.729 38.9741 18.271 38.0625 15H38.0638Z"></path>
+                  <path d="M24.1094 38.2825C26.978 37.6311 29.654 36.3164 31.9227 34.4438C34.1914 32.5713 35.9896 30.1931 37.1731 27.5H29.2981C28.3406 32.3388 26.4806 36.1963 24.1094 38.2825Z"></path>
+                  <path d="M10.7109 27.5H2.83594C4.01943 30.1931 5.81766 32.5713 8.08636 34.4438C10.3551 36.3164 13.0311 37.6311 15.8997 38.2825C13.5259 36.1963 11.6659 32.3388 10.7109 27.5Z"></path>
+                  <path d="M15.8919 1.7175C13.0233 2.36893 10.3472 3.68365 8.07854 5.55618C5.80984 7.42871 4.01161 9.80692 2.82812 12.5H10.7031C11.6606 7.66125 13.5206 3.80375 15.8919 1.7175Z"></path>
+                  <path d="M9.99868 20C9.99852 18.3285 10.102 16.6587 10.3087 15H1.93369C1.0221 18.271 1.0221 21.729 1.93369 25H10.3087C10.102 23.3413 9.99852 21.6715 9.99868 20Z"></path>
+                </svg>
+                <h3 class="h4 card-title mt-0">Gestión Laboral</h3>
+                <p class="card-text">En el ámbito de recursos humanos, apoyamos a las empresas en la gestión del talento, incluyendo procesos de reclutamiento, selección y desarrollo organizacional. Asimismo, brindamos asesoría en seguridad social, garantizando una correcta gestión de los aportes y beneficios laborales para los empleados.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <div class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none">
+                  <i class="ai-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col" id="planificacion" data-aos="fade-down">
+            <a class="card card-hover-primary bg-secondary border-0 h-100 text-decoration-none" href="index.html#seccion_pricing">
+              <div class="card-body pb-0">
+                <svg class="d-block text-warning mb-4" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M38.6803 8.92375C38.5174 7.83484 37.9698 6.84032 37.1367 6.12048C36.3036 5.40064 35.2401 5.00313 34.1391 5H5.86156C4.76054 5.00313 3.69708 5.40064 2.86395 6.12048C2.03083 6.84032 1.48319 7.83484 1.32031 8.92375L20.0003 21.0112L38.6803 8.92375Z"></path>
+                  <path d="M20.6787 23.55C20.4765 23.6807 20.2408 23.7503 20 23.7503C19.7592 23.7503 19.5235 23.6807 19.3212 23.55L1.25 11.8575V30.3887C1.25132 31.6113 1.73758 32.7834 2.60207 33.6479C3.46656 34.5124 4.63868 34.9987 5.86125 35H34.1388C35.3613 34.9987 36.5334 34.5124 37.3979 33.6479C38.2624 32.7834 38.7487 31.6113 38.75 30.3887V11.8562L20.6787 23.55Z"></path>
+                </svg>
+                <h3 class="h4 card-title mt-0">Planificación Estratégica</h3>
+                <p class="card-text">Ayudamos a las empresas a definir sus objetivos y a formular planes estratégicos que alineen sus metas con la realidad del mercado. Realizamos análisis de mercado para identificar oportunidades y amenazas, facilitando así la toma de decisiones informadas y efectivas.</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <div class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none">
+                  <i class="ai-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col" id="formacion_capacitacion" data-aos="fade-up">
+            <a class="card card-hover-primary bg-secondary border-0 h-100 text-decoration-none" href="index.html#seccion_pricing">
+              <div class="card-body pb-0">
+                <svg class="d-block text-warning mb-4" width="40" height="40" viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34.25 2H5.25C4.12344 2.00198 3.04359 2.45039 2.24699 3.24699C1.45039 4.04359 1.00198 5.12344 1 6.25V27.75C1.00198 28.8766 1.45039 29.9564 2.24699 30.753C3.04359 31.5496 4.12344 31.998 5.25 32H8.5V38.25C8.50037 38.4929 8.5715 38.7304 8.70469 38.9336C8.83789 39.1367 9.02738 39.2966 9.25 39.3938C9.40728 39.4641 9.5777 39.5003 9.75 39.5C10.0629 39.5 10.3644 39.3827 10.595 39.1712L18.4188 32H34.25C35.3766 31.998 36.4564 31.5496 37.253 30.753C38.0496 29.9564 38.498 28.8766 38.5 27.75V6.25C38.498 5.12344 38.0496 4.04359 37.253 3.24699C36.4564 2.45039 35.3766 2.00198 34.25 2ZM28.5 24.5H11C10.6685 24.5 10.3505 24.3683 10.1161 24.1339C9.8817 23.8995 9.75 23.5815 9.75 23.25C9.75 22.9185 9.8817 22.6005 10.1161 22.3661C10.3505 22.1317 10.6685 22 11 22H28.5C28.8315 22 29.1495 22.1317 29.3839 22.3661C29.6183 22.6005 29.75 22.9185 29.75 23.25C29.75 23.5815 29.6183 23.8995 29.3839 24.1339C29.1495 24.3683 28.8315 24.5 28.5 24.5ZM28.5 18.25H11C10.6685 18.25 10.3505 18.1183 10.1161 17.8839C9.8817 17.6495 9.75 17.3315 9.75 17C9.75 16.6685 9.8817 16.3505 10.1161 16.1161C10.3505 15.8817 10.6685 15.75 11 15.75H28.5C28.8315 15.75 29.1495 15.8817 29.3839 16.1161C29.6183 16.3505 29.75 16.6685 29.75 17C29.75 17.3315 29.6183 17.6495 29.3839 17.8839C29.1495 18.1183 28.8315 18.25 28.5 18.25ZM28.5 12H11C10.6685 12 10.3505 11.8683 10.1161 11.6339C9.8817 11.3995 9.75 11.0815 9.75 10.75C9.75 10.4185 9.8817 10.1005 10.1161 9.86612C10.3505 9.6317 10.6685 9.5 11 9.5H28.5C28.8315 9.5 29.1495 9.6317 29.3839 9.86612C29.6183 10.1005 29.75 10.4185 29.75 10.75C29.75 11.0815 29.6183 11.3995 29.3839 11.6339C29.1495 11.8683 28.8315 12 28.5 12Z"></path>
+                </svg>
+                <h3 class="h4 card-title mt-0">Marketing</h3>
+                <p class="card-text">...</p>
+              </div>
+              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
+                <div class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none">
+                  <i class="ai-arrow-right"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <!-- Pricing plans -->
+      <section class="container py-5 mt-5 mb-lg-3 mb-xl-4 mb-xxl-5" id="seccion_pricing">
+
+        <!-- Page title -->
+        <div class="text-center pb-3 pt-lg-2 pt-xl-4 my-1 my-sm-3 my-lg-4">
+          <h1 class="display-2">Pricing plans</h1>
+        </div>
+
+        <!-- Plans -->
+        <div class="row row-cols-3 flex-nowrap pb-4 overflow-auto">
+
+          <!-- Plan -->
+          <div class="col" style="min-width: 19rem;">
+            <div class="card h-100 py-lg-4">
+              <div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+                <h3>PLAN EMERGENTE</h3>
+                <div class="display-2 text-primary moneda">$1.200.000</div>
+                <div class="mb-4"></div>
+                <p class="mb-4 pb-4"></p>
+                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan -->
+          <div class="col" style="min-width: 19rem;">
+            <div class="card border-primary bg-primary h-100 py-lg-4">
+              <div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+                <h3 class="text-light">PLAN EMPRENDEDOR</h3>
+                <div class="display-2 text-light moneda" style="color: #ffffff !important;">$1.600.000</div>
+                <div class="text-light opacity-70 mb-4"></div>
+                <p class="text-light opacity-70 mb-4 pb-4"></p>
+                <button class="btn btn-light w-100" type="button">Botón 1</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan -->
+          <div class="col" style="min-width: 19rem;">
+            <div class="card h-100 py-lg-4">
+              <div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+                <h3>PLAN PRO</h3>
+                <div class="display-2 text-primary moneda">$3.000.000</div>
+                <div class="mb-4"></div>
+                <p class="mb-4 pb-4"></p>
+                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan -->
+          <div class="col" style="min-width: 19rem;">
+            <div class="card h-100 py-lg-4">
+              <div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+                <h3>PLAN PERSONALIZADO</h3>
+                <div class="display-2 text-primary moneda"></div>
+                <div class="mb-4"></div>
+                <p class="mb-4 pb-4">El valor varía de acuerdo a los servicios requeridos</p>
+                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Comparison table -->
+        <div class="text-center pt-md-1 pt-lg-2">
+          <button class="btn btn-more btn-link fs-4" type="button" data-show-label="Comparar Planes" data-hide-label="Comparar Planes" data-bs-toggle="collapse" data-bs-target="#comparePlans" aria-label="Comparar Planes" style="color: #027BC6 !important;"></button>
+        </div>
+        <div class="collapse show" id="comparePlans">
+          <div class="table-responsive pt-sm-2 pt-lg-3">
+            <table class="table text-center text-nowrap">
+              <thead>
+                <tr>
+                  <th scope="col" class="border-0 py-3">&nbsp;</th>
+                  <th scope="col" class="border-0 py-3"><span class="h5 mb-0">PLAN EMERGENTE</span></th>
+                  <th scope="col" class="border-0 py-3"><span class="h5 mb-0">PLAN EMPRENDEDOR</span></th>
+                  <th scope="col" class="border-0 py-3"><span class="h5 mb-0">PLAN PRO</span></th>
+                  <th scope="col" class="border-0 py-3"><span class="h5 mb-0">PLAN PERSONALIZADO</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="text-body fw-medium">Precio</span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark">$1.200.000</span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark">$1.600.000</span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark">$3.000.000</span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><span class="text-dark">Indefinido</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Empleados
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark">0 - 5</span></td>
+                  <td class="border-0 py-3"><span class="text-dark">6 - 10</span></td>
+                  <td class="border-0 py-3"><span class="text-dark">10 - 15</span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">-</span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-1 mb-0">CONTABILIDAD MENSUAL</div>
+                  </th>
+                  <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
+                  <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
+                  <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
+                  <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></th>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Conciliaciones bancarias
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Contabilización facturas de compra
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="text-body fw-medium">Contabilización facturas de venta</span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Contabilización facturas de gastos
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Contabilización de nómina
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Contabilización de ajustes contables
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-3 mb-0">ELABORACIÓN DE FACTURAS ELECTRÓNICAS</div>
+                  </th>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
+                    <div class="h5 bg-secondary pt-3 mb-0">ELABORACIÓN DE ESTADOS FINANCIEROS</div>
+                  </th>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Estado de situación financiera
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Estado de resultados integral
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-3 mb-0">ELABORACIÓN DE DOCS ELECTRÓNICOS</div>
+                  </th>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Documento soporte
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Nómina electrónica
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Acuses de recibido
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-3 mb-0">PRESENTACIÓN DE IMPUESTOS</div>
+                  </th>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      IVA - Bimestral o cuatrimestral
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      ICUI - Bimestral
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Declaración impuesto al consumo (IMPO CONSUMO)
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Retención en la fuente - Mensual
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Anticipos RST
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><!--<span class="text-dark"><i class="ai-check fs-xl text-success"></i></span>--></td>
+                  <td class="border-0 bg-secondary py-3"><!--<span class="text-dark"><i class="ai-check fs-xl text-success"></i></span>--></td>
+                  <td class="border-0 bg-secondary py-3"><!--<span class="text-dark"><i class="ai-check fs-xl text-success"></i></span>--></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><!--<i class="fa-solid fa-exclamation" style="color: orange;"></i>--></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-3 mb-0">LIQUIDACIÓN DE NÓMINA</div>
+                  </th>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Admistración de novedades
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de horas extras
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de prestaciones sociales
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de empleados
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
+                    <div class="h5 bg-secondary pt-3 mb-0">SEGURIDAD SOCIAL</div>
+                  </th>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Proceso de afiliación y retiros
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Reporte de novedades
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Reporte de incapacidades
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Cobro de incapacidades
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Elaboración y presentación de planillas
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
+                    <div class="h5 bg-secondary pt-3 mb-0">SERVICIO ADMINISTRATIVO</div>
+                  </th>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Gestión de cartera
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Elaboración y ejecución de presupuesto mensual
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Administración documental de clientes y proveedores 
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Informes de gestión financiera
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Apoyo a la gerencia en procesos administrativos
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
+                    <div class="h5 pt-3 mb-0">OTROS SERVICIOS</div>
+                  </th>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Declaración de renta anual
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Declaración de industria y comercio anual
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Declaración RST anual
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Elaboración y presentación de información exógena
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Certificación y calificación ESAL
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Informes de gestión anual ESAL
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Benefits -->
+      <section class="container pb-5 mb-md-3 mb-lg-4 mb-xxl-5">
+        <div class="row pb-md-4 pb-xl-5">
+          <div class="col-md-6 mb-2 mb-md-0" data-aos="fade-right">
+            <div class="card border-0 h-100 bg-size-cover bg-position-center" style="background-image: url(assets/img/services/v1/01.jpg);">
+              <div class="d-none d-sm-block d-md-none" style="height: 450px;"></div>
+              <div class="d-sm-none" style="height: 350px;"></div>
+              <img src="assets/img/logo.png" alt="Alianza Empresarial 360" title="Alianza Empresarial 360" class="imagen_superpuesta_logo">
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-5 offset-xl-1" id="seccion_compromiso">
+            <div class="pt-4 pb-sm-4 ps-md-4 ps-xl-0">
+              <h2 class="h1 pb-2 pb-sm-3 pb-xl-4" data-aos="zoom-in">Compromisos</h2>
+              <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+                <div class="text-body-secondary pt-1">01</div>
+                <div class="ps-3">
+                  <h3 class="h5">Colaboración Proactiva</h3>
+                  <p class="mb-0">Fomentamos una colaboración activa con nuestros clientes, adaptándonos a sus necesidades para impulsar la innovación.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+                <div class="text-body-secondary pt-1">02</div>
+                <div class="ps-3">
+                  <h3 class="h5">Asesoría Personalizada</h3>
+                  <p class="mb-0">Ofrecemos soluciones adaptadas a cada negocio, asegurando que nuestras estrategias sean únicas y efectivas.</p>
+                </div>
+              </div>
+              <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+                <div class="text-body-secondary pt-1">03</div>
+                <div class="ps-3">
+                  <h3 class="h5">Excelencia en el Servicio</h3>
+                  <p class="mb-0">Mantenemos un alto estándar de calidad en todos nuestros servicios, garantizando resultados que alineen con los objetivos de nuestros clientes.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-2 mb-xl-3" data-aos="zoom-in">
+                <div class="text-body-secondary pt-1">04</div>
+                <div class="ps-3">
+                  <h3 class="h5">Enfoque Integral</h3>
+                  <p class="mb-0">Proporcionamos una solución completa que abarca diversas áreas del negocio, facilitando la optimización de procesos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valores -->
+      <section class="container pb-5 mb-md-3 mb-lg-4 mb-xxl-5">
+        <div class="row pb-md-4 pb-xl-5">
+          <div class="col-md-6 mb-2 mb-md-0" data-aos="fade-right">
+            <h2 class="h1 pb-2 pb-sm-3 pb-xl-4" data-aos="zoom-in">Valores</h2>
+            <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">01</div>
+              <div class="ps-3">
+                <h3 class="h5">Cumplimiento</h3>
+                <p class="mb-0">Nos aseguramos de cumplir cada acuerdo y promesa, siendo un socio confiable para nuestros clientes.</p>
+              </div>
+            </div>
+            <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">02</div>
+              <div class="ps-3">
+                <h3 class="h5">Responsabilidad</h3>
+                <p class="mb-0">Actuamos con ética y compromiso en cada decisión, respaldando siempre el éxito de nuestros clientes.</p>
+              </div>
+            </div>
+            <div class="d-flex pb-3 mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">03</div>
+              <div class="ps-3">
+                <h3 class="h5">Puntualidad</h3>
+                <p class="mb-0">Valoramos el tiempo, entregando soluciones y resultados dentro de los plazos establecidos.</p>
+              </div>
+            </div>
+            <div class="d-flex mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">04</div>
+              <div class="ps-3">
+                <h3 class="h5">Efectividad</h3>
+                <p class="mb-0">Ofrecemos soluciones estratégicas que funcionan, optimizando cada proceso para alcanzar los objetivos.</div>
+            </div>
+            <div class="d-flex mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">05</div>
+              <div class="ps-3">
+                <h3 class="h5">Profesionalismo</h3>
+                <p class="mb-0">Mantenemos altos estándares en nuestro trabajo, reflejando la confianza y la excelencia en cada proyecto.</p>
+              </div>
+            </div>
+            <div class="d-flex mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">06</div>
+              <div class="ps-3">
+                <h3 class="h5">Agilidad</h3>
+                <p class="mb-0">Adaptamos rápidamente nuestras soluciones, respondiendo eficazmente a las necesidades cambiantes de las empresas.</p>
+              </div>
+            </div>
+            <div class="d-flex mb-2 mb-xl-3" data-aos="zoom-in">
+              <div class="text-body-secondary pt-1">07</div>
+              <div class="ps-3">
+                <h3 class="h5">Acompañamiento</h3>
+                <p class="mb-0">Proveemos un apoyo constante y cercano, asegurando que cada cliente sienta nuestro compromiso en todo el proceso.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2 mb-md-0" data-aos="fade-left">
+            <div class="card border-0 h-100 bg-size-cover bg-position-center" style="background-image: url(assets/img/valores.webp);">
+              <div class="d-none d-sm-block d-md-none" style="height: 450px;"></div>
+              <div class="d-sm-none" style="height: 350px;"></div>
+              <img src="assets/img/logo.png" alt="Alianza Empresarial 360" title="Alianza Empresarial 360" class="imagen_superpuesta_logo">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="bg-secondary pb-md-2 pt-lg-2 pb-lg-4 py-xl-4 py-xxl-5" style="overflow-x: auto;">
+        <div class="container py-5">
+          <h2 class="h1 text-center pb-sm-2 py-md-3 mt-sm-2 mb-lg-4">Nuestros clientes</h2>
+          <div class="mb-4 mb-lg-5 pb-3 px-3" data-simplebar>
+            <div class="row row-cols-lg-4 flex-nowrap flex-lg-wrap gy-lg-5 mx-n3">
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Faucibus amet cursus accumsan eleifend tempus diam id duis. Mi velit nulla purus commodo non.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Nulla consequat tincidunt ut aliquet quam dignissim. Sagittis, enim libero ultrices eleifend congue.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Ornare leo sed gravida quam volutpat vulputate massa aliquam. Sem lacus, quam tellus duis sit pellentesque.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Imperdiet nunc, mauris, sed at egestas. Massa laoreet facilisis turpis adipiscing semper venenatis ipsum.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Purus eu faucibus at vel, aliquam. Faucibus nibh odio sed elementum blandit ut sociis et.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Adipiscing ultrices risus maecenas libero donec nam. In sollicitudin nulla sagittis, neque sit ullamcorper.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Pharetra morbi id nibh ut at risus tortor consequat. Dictum urna vulputate quis ut facilisis turpis purus commodo.</p>
+              </div>
+              <div class="col" style="min-width: 225px;">
+                <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/logo_2.png" alt="Logo">
+                <p class="text-body-secondary mb-2">Suspendisse luctus maecenas tristique urna turpis aenean est. Porttitor porta nec tincidunt ut aliquet quam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CTA -->
+      <section class="bg-primary py-5" data-bs-theme="dark">
+        <div class="container pt-lg-2 pt-xl-4 pt-xxl-5 pb-1 pb-sm-3">
+          <div class="row pt-sm-3 pt-md-4">
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <h2 class="display-3">¿Listos para llevar su negocio al siguiente nivel?</h2>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1">
+              <p class="text-body fs-xl pb-4 mb-2 mb-lg-3">En Alianza Empresarial 360, estamos listos para ayudarte a alcanzar tus objetivos. Si deseas más información o iniciar una colaboración, completa el formulario a continuación o llámanos. ¡Estamos aquí para ti!</p>
+              <div class="input-group">
+                <span class="input-group-text text-body-secondary">
+                  <i class="ai-mail"></i>
+                </span>
+                <input class="form-control" type="email" placeholder="Te estamos esperando" readonly>
+                  <div class="btn btn-warning"><a href="contacto.html" class="enlace_general">CONTACTO</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block text-center mt-n5">
+            <svg class="text-warning ms-lg-5" width="171" height="97" viewBox="0 0 171 97" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M169.319 54.333C162.404 55.9509 155.712 58.0764 149.09 60.6764L149.07 60.6761C148.967 60.7158 148.863 60.7554 148.76 60.7951C147.3 61.3811 148.325 63.4238 149.672 63.2067C154.548 62.4134 159.994 59.8725 164.87 59.0792C148.278 73.1339 129.684 89.2549 107.779 92.6402C85.6981 96.0539 65.5665 86.7839 56.8768 66.9865C70.9662 55.0671 79.2106 35.6614 79.0299 17.6457C78.9484 10.3157 76.1485 -3.36373 65.7068 1.21851C55.8557 5.53146 52.0466 22.5213 50.5736 31.7739C48.7364 43.2858 49.7593 55.5291 53.8643 66.2014C52.787 67.0812 51.6907 67.8989 50.5755 68.6546C40.6328 75.3851 27.1039 78.8929 16.4487 72.0362C2.91045 63.3259 1.93984 44.9485 1.56902 30.4091C1.54778 29.6265 0.359869 29.6092 0.360624 30.3915C0.322634 44.0809 0.835929 59.065 10.5664 69.6857C18.5722 78.4182 30.4315 79.7753 41.3346 75.9924C46.2437 74.2834 50.7739 71.7557 54.8581 68.6348C59.9738 80.2586 68.9965 89.6956 82.2735 93.7393C113.474 103.223 141.744 83.0494 164.903 63.697L161.901 71.0334C161.267 72.5887 163.76 73.2736 164.393 71.7389C165.986 67.8713 167.569 63.9933 169.152 60.1359C169.288 60.0247 169.695 58.6127 169.821 58.491C170.122 57.1161 169.152 60.1359 169.851 58.4169C170.189 57.6087 170.517 56.79 170.855 55.9818C171.248 54.9994 170.185 54.1192 169.319 54.333ZM54.3624 59.8578C51.4872 49.1623 51.6051 37.5841 54.2025 26.8039C55.5185 21.3369 57.4405 15.8066 60.1572 10.8541C61.2311 8.89354 62.5139 6.77134 64.2307 5.31421C69.4231 0.902277 74.3649 4.80357 75.8002 10.4446C80.5272 28.9489 70.1806 51.6898 55.8431 64.5114C55.2971 63.0109 54.793 61.4698 54.3624 59.8578Z"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-lg-5 pt-4 pb-5">
+      <div class="container pt-3 mt-md-2 mt-lg-3">
+          <div class="row gy-md-5 gy-4 mb-md-5 mb-4 pb-lg-2">
+          <div class="col-lg-3 ajuste_contenedor_footer_logo">
+              <a class="navbar-brand pe-sm-3" href="index.html">
+              <div class="text-primary flex-shrink-0 me-2">
+                  <div style="width: 35px; height: 32px;">
+                  <img src="assets/img/logo_2.png" alt="Alianza Empresarial 360" title="Alianza Empresarial 360" >
+                  </div>
+              </div>
+              Alianza Empresarial 360
+              </a>
+              <p class="mb-4 pb-lg-1 fs-xs text-body-secondary" style="max-width: 306px;">Soluciones estratégicas integrales a empresas</p>
+              <div class="d-flex gap-3">
+              <a class="btn btn-secondary btn-icon btn-sm btn-facebook rounded-circle" href="https://www.facebook.com/share/1d48hB5DZAzeJXMv/?mibextid=LQQJ4d" aria-label="Facebook" target="_blank">
+                  <i class="ai-facebook"></i>
+              </a>
+              <a class="btn btn-secondary btn-icon btn-sm btn-instagram rounded-circle" href="https://www.instagram.com/alianzacontablebposas/profilecard/?igsh=M3dsZ3ozN2pzNGl0" aria-label="Instagram" target="_blank">
+                  <i class="ai-instagram"></i>
+              </a>
+              </div>
+          </div>
+          <div class="col-xl-8 offset-xl-1 col-lg-9">
+            <div class="row row-cols-sm-4 row-cols-1 contenedor_opciones_col_footer">
+              <div class="col ajuste_col_footer">
+                  <ul class="nav flex-column mb-0">
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="index.html#seccion_servicios">Servicios</a></li>
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="index.html#seccion_testimonios">Nuestros clientes</a></li>
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="index.html#seccion_compromiso">Compromiso</a></li>
+                  </ul>
+              </div>
+              <div class="col ajuste_col_footer">
+                <ul class="nav flex-column mb-0">
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="contacto.html">Contáctanos</a></li>
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="politica_de_privacidad.html">Política de privacidad</a></li>
+                  <li class="nav-item mb-2"><a class="nav-link p-0 enlace_contacto_col" href="quienes_somos.html">Nosotros</a></li>
+                </ul>
+              </div>
+              <div class="col ajuste_col_footer">
+                  <ul class="nav flex-column mb-0">
+                  <li class="nav-item mb-2">
+                      <a class="nav-link p-0 enlace_contacto_col" href="https://wa.me/573003305827">
+                        <i class="fa-brands fa-whatsapp"></i>&nbsp;
+                        +57&nbsp;(300)&nbsp;330&nbsp;5827</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                      <i class="fa-regular fa-envelope"></i>&nbsp;
+                      <a class="text-primary fw-semibold p-0 enlace_contacto_col" href="mailto:administracion@alianzacontablesas.com">administracion@alianzacontablesas.com</a>
+                  </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="nav fs-sm">
+          <span class="text-body-secondary">&copy; Todos los derechos reservados para Alianza Empresarial 360</span>
+          </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a class="btn-scroll-top" href="#top" data-scroll aria-label="Scroll back to top">
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg>
+      <i class="ai-arrow-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: JS libraries and plugins -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap + Theme scripts -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Script main -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

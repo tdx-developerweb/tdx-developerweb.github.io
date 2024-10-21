@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de inicio -->
+  <url>
+    <loc>index.html</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página de política de privacidad -->
+  <url>
+    <loc>politica_de_privacidad.html</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Página de contacto -->
+  <url>
+    <loc>contacto.html</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página de ¿Quienes somos? -->
+  <url>
+    <loc>quienes_somos.html</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
