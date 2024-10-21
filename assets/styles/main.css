@@ -158,6 +158,10 @@ html{
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 
 
@@ -245,16 +249,34 @@ html{
     align-content: center;
 }
 
+.section-encabezado-2 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Asegura que ocupe toda la altura visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .video_de_fondo{
     width: 100%;
     height: 900px;
     object-fit: cover;
 }
 
-.video_de_fondo_2{
+.contenedor_video_de_fondo_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    z-index: 1; /* El video queda detrás */
+}
+
+.video_de_fondo_2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* El video cubrirá el área completa sin deformarse */
 }
 
 .video_de_fondo_3{
@@ -278,6 +300,7 @@ html{
     height: auto;
     background-color: #00000075;
     padding: 50px 50px;
+    margin: 0%;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -285,6 +308,19 @@ html{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+}
+
+.contenedor_superpuesto_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* El contenido superpuesto estará encima del video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(179, 255, 0, 0.3); /* Color semitransparente para ver el video de fondo */
 }
 
 .contenedor_informacion_encabezado{
