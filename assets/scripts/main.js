@@ -52,18 +52,7 @@ window.addEventListener('scroll', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    function ajustarAlturaVideo() {
-        const contenedor = document.getElementById('contenedor_encabezado_2');
-        const video = document.querySelector('.video_de_fondo_2');
-
-        // Captura la altura del contenedor
-        const alturaContenedor = contenedor.clientHeight;
-
-        // Asigna la altura al video
-        video.style.height = `${alturaContenedor}px`;
-    }
-
+document.addEventListener('DOMContentLoaded', () => {/* Encabezado */
     function ajustarAlturaVideoFondo() {
         const contenedor = document.getElementById('contenedor_encabezado');
         const video = document.querySelector('.video_de_fondo');
@@ -75,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         video.style.height = `${alturaContenedor}px`;
     }
 
-    function ajustarAlturaVideoFondo_2() {
+    function ajustarAlturaVideoFondo_2() {/* Fondo */
         const contenedor = document.getElementById('contenedor_encabezado_3');
         const video = document.querySelector('.video_de_fondo_3');
 
@@ -89,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function ajustarAlturas() {
         // Utiliza requestAnimationFrame para asegurar que el ajuste se realice después del renderizado
         requestAnimationFrame(() => {
-            ajustarAlturaVideo();
             ajustarAlturaVideoFondo();
             ajustarAlturaVideoFondo_2();
         });
@@ -108,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/* Script la cuenta regresiva que aparece en el formulario */
+/* Script de la cuenta regresiva que aparece en el formulario */
 function startCountdown(elementId, storageKey) {
     const duration = 1.5 * 24 * 60 * 60 * 1000;
 
