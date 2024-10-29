@@ -258,9 +258,8 @@
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Servicios</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="index.html#consultoria_contable">Consultoría Contable</a></li>
-                  <li><a class="dropdown-item" href="index.html#asesoria_legal">Asesoría Legal</a></li>
+                  <li><a class="dropdown-item" href="index.html#asesoria_legal">Asesoría Administrativa</a></li>
                   <li><a class="dropdown-item" href="index.html#gestion_laboral">Gestión Laboral</a></li>
-                  <li><a class="dropdown-item" href="index.html#planificacion">Planificación Estratégica</a></li>
                   <li><a class="dropdown-item" href="index.html#formacion_capacitacion">Marketing</a></li>
                 </ul>
               </li>
@@ -442,7 +441,9 @@
                 <div class="display-2 text-primary moneda">$1.200.000</div>
                 <div class="mb-4"></div>
                 <p class="mb-4 pb-4"></p>
-                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+                <a href="contacto.html">
+                  <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Contáctanos</button>
+                </a>
               </div>
             </div>
           </div>
@@ -455,7 +456,9 @@
                 <div class="display-2 text-light moneda" style="color: #ffffff !important;">$1.600.000</div>
                 <div class="text-light opacity-70 mb-4"></div>
                 <p class="text-light opacity-70 mb-4 pb-4"></p>
-                <button class="btn btn-light w-100" type="button">Botón 1</button>
+                <a href="contacto.html">
+                  <button class="btn btn-primary w-100" type="button" style="color: #202020; background-color: #ffffff !important;">Contáctanos</button>
+                </a>
               </div>
             </div>
           </div>
@@ -468,7 +471,9 @@
                 <div class="display-2 text-primary moneda">$3.000.000</div>
                 <div class="mb-4"></div>
                 <p class="mb-4 pb-4"></p>
-                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+                <a href="contacto.html">
+                  <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Contáctanos</button>
+                </a>
               </div>
             </div>
           </div>
@@ -481,7 +486,9 @@
                 <div class="display-2 text-primary moneda"></div>
                 <div class="mb-4"></div>
                 <p class="mb-4 pb-4">El valor varía de acuerdo a los servicios requeridos</p>
-                <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Botón 1</button>
+                <a href="contacto.html">
+                  <button class="btn btn-primary w-100" type="button" style="background-color: #027BC6 !important;">Contáctanos</button>
+                </a>
               </div>
             </div>
           </div>
@@ -525,16 +532,21 @@
                   <td class="border-0 py-3"><span class="text-dark">10 - 15</span></td>
                   <td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">-</span></td>
                 </tr>
-                <tr>
+                <tr style="cursor: pointer;">
                   <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-1 mb-0">CONTABILIDAD MENSUAL</div>
+                    <div class="h5 pt-1 mb-0" id="texto_1">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual">
+                        <path id="flecha_1" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      CONTABILIDAD MENSUAL
+                    </div>
                   </th>
                   <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
                   <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
                   <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></th>
                   <th scope="col" class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></th>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Conciliaciones bancarias
@@ -545,7 +557,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Contabilización facturas de compra
@@ -556,7 +568,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="text-body fw-medium">Contabilización facturas de venta</span>
                   </th>
@@ -565,7 +577,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Contabilización facturas de gastos
@@ -576,7 +588,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Contabilización de nómina
@@ -587,7 +599,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Contabilización de ajustes contables
@@ -599,24 +611,20 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
                 <tr>
-                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-3 mb-0">ELABORACIÓN DE FACTURAS ELECTRÓNICAS</div>
-                  </th>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
-                </tr>
-                <tr>
-                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
-                    <div class="h5 bg-secondary pt-3 mb-0">ELABORACIÓN DE ESTADOS FINANCIEROS</div>
+                  <th scope="col" class="border-0 bg-secondary text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual2">
+                        <path id="flecha_2" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      ELABORACIÓN DE ESTADOS FINANCIEROS
+                    </div>
                   </th>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles2" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Estado de situación financiera
@@ -627,7 +635,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles2" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Estado de resultados integral
@@ -639,15 +647,20 @@
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
                 <tr>
-                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-3 mb-0">ELABORACIÓN DE DOCS ELECTRÓNICOS</div>
+                  <th scope="col" class="border-0  text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual3">
+                        <path id="flecha_3" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      ELABORACIÓN DE DOCS ELECTRÓNICOS
+                    </div>
                   </th>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles3" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Documento soporte
@@ -658,7 +671,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles3" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Nómina electrónica
@@ -669,7 +682,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles3" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Acuses de recibido
@@ -681,26 +694,20 @@
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
                 <tr>
-                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-3 mb-0">PRESENTACIÓN DE IMPUESTOS</div>
+                  <th scope="col" class="border-0 bg-secondary text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual4">
+                        <path id="flecha_4" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      PRESENTACIÓN DE IMPUESTOS
+                    </div>
                   </th>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end; border-top-right-radius: 15px; border-bottom-right-radius: 15px;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
-                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
-                    <span class="d-flex align-items-center text-body fw-medium">
-                      IVA - Bimestral o cuatrimestral
-                    </span>
-                  </th>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
-                </tr>
-                <tr>
+                <tr class="detalles4" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       ICUI - Bimestral
@@ -711,7 +718,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles4" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Declaración impuesto al consumo (IMPO CONSUMO)
@@ -722,7 +729,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles4" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Retención en la fuente - Mensual
@@ -733,7 +740,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles4" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Anticipos RST
@@ -744,9 +751,20 @@
                   <td class="border-0 bg-secondary py-3"><!--<span class="text-dark"><i class="ai-check fs-xl text-success"></i></span>--></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><!--<i class="fa-solid fa-exclamation" style="color: orange;"></i>--></td>
                 </tr>
+                <tr class="detalles4" style="display: none;">
+                  <th scope="row" class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      IVA - Bimestral o cuatrimestral
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
                 <tr>
                   <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-3 mb-0">LIQUIDACIÓN DE NÓMINA</div>
+                    <div class="h5 pt-3 mb-0">ELABORACIÓN DE FACTURAS ELECTRÓNICAS</div>
                   </th>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
@@ -754,6 +772,57 @@
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
                 <tr>
+                  <th scope="col" class="border-0 bg-secondary text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_5">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual5">
+                        <path id="flecha_5" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      LIQUIDACIÓN DE NÓMINA
+                    </div>
+                  </th>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3" style="align-content: end; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+                    <span class="text-dark">
+                      <i class="fa-solid fa-exclamation" style="color: orange;"></i>
+                    </span>
+                  </td>
+                </tr>
+                <tr class="detalles5" style="display: none;">
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de horas extras
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr class="detalles5" style="display: none;">
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de prestaciones sociales
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr class="detalles5" style="display: none;">
+                  <th scope="row" class="border-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Liquidación de empleados
+                    </span>
+                  </th>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                </tr>
+                <tr class="detalles5" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Admistración de novedades
@@ -765,48 +834,20 @@
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
                 <tr>
-                  <th scope="row" class="border-0 text-start py-3 ps-4">
-                    <span class="d-flex align-items-center text-body fw-medium">
-                      Liquidación de horas extras
-                    </span>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_6">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual6">
+                        <path id="flecha_6" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      SEGURIDAD SOCIAL
+                    </div>
                   </th>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
-                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
-                    <span class="d-flex align-items-center text-body fw-medium">
-                      Liquidación de prestaciones sociales
-                    </span>
-                  </th>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="border-0 text-start py-3 ps-4">
-                    <span class="d-flex align-items-center text-body fw-medium">
-                      Liquidación de empleados
-                    </span>
-                  </th>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
-                </tr>
-                <tr>
-                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
-                    <div class="h5 bg-secondary pt-3 mb-0">SEGURIDAD SOCIAL</div>
-                  </th>
-                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
-                </tr>
-                <tr>
+                <tr class="detalles6" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Proceso de afiliación y retiros
@@ -817,7 +858,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles6" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Reporte de novedades
@@ -828,7 +869,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles6" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Reporte de incapacidades
@@ -839,7 +880,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles6" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Cobro de incapacidades
@@ -850,7 +891,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles6" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Elaboración y presentación de planillas
@@ -862,15 +903,20 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
                 <tr>
-                  <th scope="col" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4" style="align-content: center !important; display: flex !important;">
-                    <div class="h5 bg-secondary pt-3 mb-0">SERVICIO ADMINISTRATIVO</div>
+                  <th scope="col" class="border-0 bg-secondary text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_7">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual7">
+                        <path id="flecha_7" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      SERVICIO ADMINISTRATIVO
+                    </div>
                   </th>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles7" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Gestión de cartera
@@ -881,7 +927,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles7" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Elaboración y ejecución de presupuesto mensual
@@ -892,7 +938,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles7" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Administración documental de clientes y proveedores 
@@ -903,7 +949,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles7" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Informes de gestión financiera
@@ -914,7 +960,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles7" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Apoyo a la gerencia en procesos administrativos
@@ -926,15 +972,31 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
                 <tr>
-                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4">
-                    <div class="h5 pt-3 mb-0">OTROS SERVICIOS</div>
+                  <th scope="col" class="border-0 text-start pt-4 pb-3 ps-4" style="border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div class="h5 pt-1 mb-0" id="texto_8">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="mas_tabla" id="contabilidadMensual8">
+                        <path id="flecha_8" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                      </svg>
+                      <b style="color: #202020;">OTROS SERVICIOS</b>
+                    </div>
                   </th>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3" style="align-content: end;"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles8" style="display: none;">
+                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
+                    <span class="d-flex align-items-center text-body fw-medium">
+                      Informes de gestión anual ESAL
+                    </span>
+                  </th>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
+                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
+                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
+                </tr>
+                <tr class="detalles8" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Declaración de renta anual
@@ -945,7 +1007,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles8" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Declaración de industria y comercio anual
@@ -956,7 +1018,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles8" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Declaración RST anual
@@ -967,7 +1029,7 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
                 </tr>
-                <tr>
+                <tr class="detalles8" style="display: none;">
                   <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Elaboración y presentación de información exógena
@@ -978,7 +1040,7 @@
                   <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
-                <tr>
+                <tr class="detalles8" style="display: none;">
                   <th scope="row" class="border-0 text-start py-3 ps-4">
                     <span class="d-flex align-items-center text-body fw-medium">
                       Certificación y calificación ESAL
@@ -988,17 +1050,6 @@
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
                   <td class="border-0 py-3"><span class="text-dark"><i class="fa-solid fa-exclamation" style="color: orange;"></i></span></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4">
-                    <span class="d-flex align-items-center text-body fw-medium">
-                      Informes de gestión anual ESAL
-                    </span>
-                  </th>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-cross fs-xl text-danger"></i></span></td>
-                  <td class="border-0 bg-secondary py-3"><span class="text-dark"><i class="ai-check fs-xl text-success"></i></span></td>
-                  <td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><i class="fa-solid fa-exclamation" style="color: orange;"></i></td>
                 </tr>
               </tbody>
             </table>
@@ -1127,73 +1178,59 @@
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/forja.png" alt="forja" title="forja">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/forja.png" alt="forja" title="forja">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Forja Studios</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/eminente.png" alt="eminente" title="eminente">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/eminente.png" alt="eminente" title="eminente">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Eminente</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/tdx.png" alt="tdx" title="tdx">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/tdx.png" alt="tdx" title="tdx">
-                <p class="text-body-secondary mb-2" style="width: 100%;">TDX</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/neofish.jpeg" alt="neofish" title="neofish">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/neofish.jpeg" alt="neofish" title="neofish">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Neofish</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/fabulosas.png" alt="fabulosas" title="fabulosas">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/fabulosas.png" alt="fabulosas" title="fabulosas">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Fabulosas</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/riofresco.png" alt="riofresco" title="riofresco">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/riofresco.png" alt="riofresco" title="riofresco">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Río fresco</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/add.png" alt="add" title="add">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/add.png" alt="add" title="add">
-                <p class="text-body-secondary mb-2" style="width: 100%;">add protection</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/dushi.png" alt="dushi" title="dushi">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/dushi.png" alt="dushi" title="dushi">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Dushi</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/dy.png" alt="dy" title="dy">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/dy.png" alt="dy" title="dy">
-                <p class="text-body-secondary mb-2" style="width: 100%;">D'ye Dstyle</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/living.png" alt="living" title="living">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/living.png" alt="living" title="living">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Muebles Living Confort</p>
               </div>
 
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/pg.png" alt="pg" title="pg">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/pg.png" alt="pg" title="pg">
-                <p class="text-body-secondary mb-2" style="width: 100%;">PG Bobinados S.A.S</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/mos.png" alt="mos" title="mos">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/mos.png" alt="mos" title="mos">
-                <p class="text-body-secondary mb-2" style="width: 100%;">MOS Arquitectos</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/bonanza.png" alt="bonanza" title="bonanza">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/bonanza.png" alt="bonanza" title="bonanza">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Bonanza</p>
               </div>
               <div class="col" style="min-width: 225px; text-align: center; justify-content: center; justify-items: center; display: flex; flex-wrap: wrap;">
                 <img class="d-block d-dark-mode-none mb-2 mb-lg-2 width-100px" src="assets/img/empresas/kontinua.png" alt="kontinua" title="kontinua">
                 <img class="d-none d-dark-mode-block mb-2 mb-lg-2 width-100px" src="assets/img/empresas/kontinua.png" alt="kontinua" title="kontinua">
-                <p class="text-body-secondary mb-2" style="width: 100%;">Kontinua</p>
               </div>
             </div>
           </div>
@@ -1315,5 +1352,225 @@
     <script>
       AOS.init();
     </script>
+
+  <script>
+document.getElementById('contabilidadMensual').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles');
+      const texto = document.getElementById('texto_1');
+      const flecha = document.getElementById('flecha_1');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_1') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual2').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles2');
+      const texto = document.getElementById('texto_2');
+      const flecha = document.getElementById('flecha_2');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_2') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual3').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles3');
+      const texto = document.getElementById('texto_3');
+      const flecha = document.getElementById('flecha_3');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_3') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual4').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles4');
+      const texto = document.getElementById('texto_4');
+      const flecha = document.getElementById('flecha_4');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_4') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual5').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles5');
+      const texto = document.getElementById('texto_5');
+      const flecha = document.getElementById('flecha_5');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_5') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual6').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles6');
+      const texto = document.getElementById('texto_6');
+      const flecha = document.getElementById('flecha_6');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_6') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual7').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles7');
+      const texto = document.getElementById('texto_7');
+      const flecha = document.getElementById('flecha_7');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_7') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+    });
+
+    document.getElementById('contabilidadMensual8').addEventListener('click', function() {
+      const detalles = document.querySelectorAll('.detalles8');
+      const texto = document.getElementById('texto_8');
+      const flecha = document.getElementById('flecha_8');
+
+      // Alterna la visibilidad de las filas de detalles
+      detalles.forEach(detalle => {
+          detalle.style.display = detalle.style.display === 'none' ? 'table-row' : 'none';
+      });
+
+      // Alterna el color y el fill del texto
+      const nuevoColor = texto.style.color === 'rgb(255, 0, 0)' ? '#202020' : '#ff0000';
+      texto.style.color = nuevoColor;
+      texto.style.fill = nuevoColor;
+      
+
+      // Alterna el contenido del atributo 'd' de la flecha basado en su id
+      if (flecha.id === 'flecha_8') {
+          const nuevoD = flecha.getAttribute('d') === 
+              'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z' 
+              ? 'M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z'
+              : 'M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z';
+          
+          flecha.setAttribute('d', nuevoD);
+      }
+  });
+
+
+  </script>
   </body>
 </html>
