@@ -191,6 +191,28 @@ body{
     height: auto;
 }
 
+.h5{
+    color: #202020 !important;
+    transition: 0.25s;
+}
+
+.h5:hover{
+    color: #202020 !important;
+}
+
+.mas_tabla{
+    width: 25px;
+    margin-right: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.mas_tabla:hover{
+    fill: #1595e6;
+    transform: rotate(90deg);
+}
+
+
 .input_1_contacto:focus{
     outline: 3px solid #303030;
 }
